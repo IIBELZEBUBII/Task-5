@@ -4,10 +4,10 @@
 
 | Файл | Описание |
 |---|---|
-| `two-link.urdf.xml` | URDF маятника с занятий (без изменений) |
+| `two-link.urdf.xml` | URDF маятника |
 | `simulation.py` | Основная симуляция |
 | `plot_results.py` | Построение графиков по логу |
-| `sim_log.csv` | Лог (создаётся после запуска симуляции) |
+| `sim_log.csv` | Лог |
 
 ## Установка зависимостей
 
@@ -27,7 +27,7 @@ python plot_results.py
 
 ## Как работает
 
-1. **URDF** — тот же `two-link.urdf.xml` с занятий. Маятник подвешен в точке (0,0,2), звенья длиной 0.8 м.
+1. **URDF** — `two-link.urdf.xml` маятник. Маятник подвешен в точке (0,0,2), звенья длиной 0.8 м.
 
 2. **IK** — на каждом шаге вызывается `p.calculateInverseKinematics(robot, EEF_LINK, target_pos)`.  
    PyBullet решает задачу и возвращает целевые углы `q1_target, q2_target`.
